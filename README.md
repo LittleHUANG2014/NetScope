@@ -119,7 +119,7 @@ src/NetScope/
 |---|---|---|
 | `oui.tsv` | exe 同目录（可选） | 覆盖内嵌 OUI 厂商数据 |
 | `man_id.tsv` | exe 同目录（可选） | 覆盖内嵌 PNO 厂商数据 |
-| `segments.txt` | exe 同目录 | 阶段 3 自定义网段列表（每行一个 CIDR） |
+| `segments.txt` | exe 同目录（可选） | 阶段 3 自定义网段列表（每行一个 CIDR） |
 
 若未找到外置 TSV 文件，自动使用内嵌资源。
 
