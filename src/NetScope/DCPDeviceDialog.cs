@@ -38,7 +38,7 @@ public class DcpDeviceDialog : Window
         _old = oldValues;
 
         Title = "DCP Device Operations";
-        Width = 480;
+        Width = 440;
         Height = 380;
         WindowStartupLocation = WindowStartupLocation.CenterOwner;
         ResizeMode = ResizeMode.NoResize;
@@ -81,12 +81,10 @@ public class DcpDeviceDialog : Window
         });
 
         var grid = new Grid { Margin = new Thickness(0, 0, 0, 8) };
+        grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
+        grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
         for (int i = 0; i < 4; i++)
-        {
             grid.RowDefinitions.Add(new RowDefinition());
-            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
-            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-        }
 
         _txtName = AddField(grid, 0, "Name of station", oldValues.NameOfStation);
         _txtIp = AddField(grid, 1, "IP", oldValues.Ip.ToString());
