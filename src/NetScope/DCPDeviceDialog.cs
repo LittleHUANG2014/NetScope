@@ -38,7 +38,7 @@ public class DcpDeviceDialog : Window
         _old = oldValues;
 
         Title = "DCP Device Operations";
-        Width = 880;
+        Width = 440;
         Height = 380;
         WindowStartupLocation = WindowStartupLocation.CenterOwner;
         ResizeMode = ResizeMode.NoResize;
