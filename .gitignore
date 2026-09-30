@@ -19,6 +19,7 @@ update_vendor_data.ps1
 ## Deprecated docs
 plc-sweep-需求分析.md
 NetScan-需求分析.md
+cpp_tools-逻辑梳理.md
 
 ## IDE / OS
 .vs/
