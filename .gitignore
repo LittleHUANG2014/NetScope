@@ -1,0 +1,28 @@
+## Build artifacts
+src/NetScope/bin/
+src/NetScope/obj/
+*.dll
+*.pdb
+*.cache
+*.baml
+
+## .NET SDK (local copy)
+.dotnet/
+
+## Deprecated / reference-only directories
+demo/
+plc-sweep/
+
+## Deprecated scripts
+update_vendor_data.ps1
+
+## Deprecated docs
+plc-sweep-需求分析.md
+NetScan-需求分析.md
+
+## IDE / OS
+.vs/
+.vscode/
+*.user
+*.suo
+Thumbs.db

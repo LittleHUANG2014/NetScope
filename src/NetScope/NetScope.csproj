@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PlatformTarget>x64</PlatformTarget>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyTitle>NetScope Network Discovery Tool</AssemblyTitle>
+    <Product>NetScope</Product>
+    <Company>NetScope</Company>
+    <Copyright>Copyright (C) 2026</Copyright>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0</FileVersion>
+    <InformationalVersion>1.0.0</InformationalVersion>
+    <SatelliteResourceLanguages>zh-Hans</SatelliteResourceLanguages>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- 发布：单文件自包含 Win-x64（dotnet publish -c Release 自动生效） -->
+    <RuntimeIdentifier Condition="'$(Configuration)'=='Release'">win-x64</RuntimeIdentifier>
+    <SelfContained Condition="'$(Configuration)'=='Release'">true</SelfContained>
+    <PublishSingleFile Condition="'$(Configuration)'=='Release'">true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="data\oui.tsv" />
+    <EmbeddedResource Include="data\identify.tsv" />
+    <EmbeddedResource Include="data\man_id.tsv" />
+    <!-- Npcap 官方安装包（如存在则嵌入；放置文件 Assets\npcap-installer.exe 即可） -->
+    <EmbeddedResource Include="Assets\npcap-installer.exe" Condition="Exists('Assets\npcap-installer.exe')" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- F54：阶段 3 网段配置随程序输出到同目录，用户可直接编辑 -->
+    <None Include="segments.txt" CopyToOutputDirectory="PreserveNewest" />
+    <!-- 应用图标：ApplicationIcon=exe 图标；Resource 嵌入程序集供窗口/托盘使用（单文件分发无需外部文件） -->
+    <Resource Include="icon.ico" />
+  </ItemGroup>
+
+</Project>

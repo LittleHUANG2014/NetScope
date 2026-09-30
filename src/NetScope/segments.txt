@@ -1,0 +1,34 @@
+# NetScope Phase 3 scan segments configuration (F54)
+# One segment per line, format: IP/prefix, e.g. 192.168.1.0/24 or 10.0.0.0/8
+# A prefix <= 24 is automatically sliced into /24 scans; a prefix > 24 is scanned with its actual prefix
+# Lines starting with # are comments; blank lines are ignored
+# After deleting this file, the app falls back to the built-in 24 common private /24 segments
+
+# ---- Common private /24 segments ----
+192.168.0.0/24
+10.0.0.0/24
+172.16.0.0/24
+192.168.1.0/24
+10.1.0.0/24
+172.20.0.0/24
+192.168.2.0/24
+10.10.0.0/24
+172.16.1.0/24
+192.168.10.0/24
+10.0.1.0/24
+172.31.0.0/24
+192.168.100.0/24
+10.0.2.0/24
+172.16.31.0/24
+192.168.31.0/24
+10.1.1.0/24
+172.18.0.0/24
+192.168.8.0/24
+10.10.10.0/24
+172.17.0.0/24
+192.168.50.0/24
+10.100.0.0/24
+192.168.254.0/24
+
+# ---- APIPA link-local segment (auto-sliced into 256 /24s) ----
+169.254.0.0/16

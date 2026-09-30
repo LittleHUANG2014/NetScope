@@ -1,0 +1,12 @@
+<Application x:Class="NetScope.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+  <Application.Resources>
+    <!-- 基础样式可后续补充 -->
+    <SolidColorBrush x:Key="BrushAccent" Color="#0078D4"/>
+    <SolidColorBrush x:Key="BrushOk" Color="#107C10"/>
+    <SolidColorBrush x:Key="BrushWarn" Color="#FFB900"/>
+    <SolidColorBrush x:Key="BrushError" Color="#D83B01"/>
+  </Application.Resources>
+</Application>

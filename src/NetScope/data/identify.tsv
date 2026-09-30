@@ -1,0 +1,170 @@
+# NetScope PLC 离线识别规则表
+# 格式：KIND<TAB>KEY<TAB>LABEL    （# 开头为注释，KIND=host 匹配主机名，KIND=vendor 匹配 IEEE 厂商名）
+# 匹配为「不区分大小写的子串包含」，同 KIND 内按文件顺序取第一个命中 —— 具体规则放前面，宽泛规则放后面。
+#
+# ---------- 主机名规则（反向 DNS 得到的主机名，如 iQOO-10.lan）----------
+host	iphone	iPhone
+host	ipad	iPad
+host	ipod	iPod
+host	iqoo	vivo iQOO 手机
+host	vivo	vivo 手机
+host	redmi	Redmi 手机
+host	poco	POCO 手机
+host	xiaomi	小米手机
+host	mi-phone	小米手机
+host	oppo	OPPO 手机
+host	realme	realme 手机
+host	oneplus	一加手机
+host	honor	荣耀手机
+host	huawei	华为设备
+host	meizu	魅族手机
+host	zte	中兴设备
+host	nokia	诺基亚设备
+host	galaxy	三星 Galaxy
+host	samsung	三星设备
+host	pixel	Google Pixel
+host	nexus	Google Nexus
+host	macbook	Mac 电脑
+host	imac	iMac
+host	mac-mini	Mac mini
+host	macpro	Mac Pro
+host	desktop-	Windows 电脑
+host	laptop-	Windows 笔记本
+host	win-	Windows 电脑
+host	raspberrypi	树莓派
+host	raspberry	树莓派
+host	orangepi	香橙派
+host	nanopi	NanoPi
+host	esp32	ESP32 物联网设备
+host	esp8266	ESP8266 物联网设备
+host	esp-	ESP 物联网设备
+host	sonoff	Sonoff 智能开关
+host	shelly	Shelly 智能设备
+host	tasmota	Tasmota 智能设备
+host	tuya	涂鸦智能设备
+host	openwrt	OpenWrt 路由器
+host	kwrt	Kwrt 路由器
+host	padavan	Padavan 路由器
+host	asuswrt	华硕路由器
+host	router	路由器
+host	gateway	网关
+host	nas	NAS 存储
+host	synology	群晖 NAS
+host	diskstation	群晖 NAS
+host	omv	OpenMediaVault NAS
+host	truenas	TrueNAS 存储
+host	printer	网络打印机
+host	hp-	惠普打印机
+host	epson	爱普生打印机
+host	brother	兄弟打印机
+host	esxi	VMware ESXi 主机
+host	proxmox	Proxmox 虚拟化主机
+host	vmware	虚拟机
+host	ubuntu	Linux（Ubuntu）
+host	debian	Linux（Debian）
+host	centos	Linux（CentOS）
+host	fedora	Linux（Fedora）
+host	arch	Linux（Arch）
+host	android	Android 设备
+host	iphone-	iPhone
+host	s7-1200	西门子 S7-1200 PLC
+host	s7-1500	西门子 S7-1500 PLC
+host	s71200	西门子 S7-1200 PLC
+host	s71500	西门子 S7-1500 PLC
+host	simatic	西门子 SIMATIC
+host	plc	PLC
+host	hmi	HMI
+host	panelview	罗克韦尔 HMI
+host	robot	工业机器人
+host	camera	网络摄像头
+host	ipcam	网络摄像头
+host	ipc-	网络摄像头
+host	cam-	网络摄像头
+host	nvr	NVR 录像机
+host	dvr	DVR 录像机
+host	chromecast	Chromecast
+host	appletv	Apple TV
+host	apple-tv	Apple TV
+host	airplay	AirPlay 设备
+host	sonos	Sonos 音箱
+host	roku	Roku 播放器
+host	xbox	Xbox
+host	ps4	PlayStation 4
+host	ps5	PlayStation 5
+host	switch	交换机
+host	ap-	无线 AP
+host	tv-	智能电视
+host	-mi-tv	小米电视
+#
+# ---------- IEEE 厂商名规则（OUI 查到的注册厂商，如 "Apple, Inc."）----------
+vendor	Apple	Apple 设备
+vendor	Samsung	三星设备
+vendor	Huawei	华为设备
+vendor	Xiaomi	小米设备
+vendor	vivo	vivo 手机
+vendor	OPPO	OPPO 手机
+vendor	Honor	荣耀设备
+vendor	OnePlus	一加手机
+vendor	Meizu	魅族设备
+vendor	ZTE	中兴设备
+vendor	Google	Google 设备
+vendor	Amazon	Amazon 设备
+vendor	Roku	Roku 设备
+vendor	Sonos	Sonos 音箱
+vendor	Sony	索尼设备
+vendor	LG Electronics	LG 设备
+vendor	Panasonic	松下设备
+vendor	Philips	飞利浦设备
+vendor	Nokia	诺基亚设备
+vendor	Motorola	摩托罗拉设备
+vendor	Raspberry	树莓派
+vendor	Espressif	ESP 物联网设备
+vendor	Tuya	涂鸦智能设备
+vendor	ITEAD	Sonoff 设备
+vendor	Realtek	Realtek 网卡
+vendor	Intel	Intel 网卡/主机
+vendor	Qualcomm	高通芯片
+vendor	Broadcom	博通芯片
+vendor	MediaTek	联发科芯片
+vendor	Texas Instruments	TI 芯片
+vendor	TP-LINK	TP-LINK 网络设备
+vendor	ASUSTek	华硕设备
+vendor	Netgear	NETGEAR 网络设备
+vendor	D-Link	D-Link 网络设备
+vendor	H3C	H3C 网络设备
+vendor	New H3C	H3C 网络设备
+vendor	Ruijie	锐捷网络设备
+vendor	Tenda	腾达网络设备
+vendor	Mercury	水星网络设备
+vendor	Cisco	Cisco 网络设备
+vendor	Juniper	Juniper 网络设备
+vendor	Aruba	Aruba 网络设备
+vendor	Ubiquiti	Ubiquiti 网络设备
+vendor	MikroTik	MikroTik 路由器
+vendor	VMware	虚拟机
+vendor	VirtualBox	虚拟机
+vendor	Microsoft	微软设备
+vendor	Dell	戴尔电脑
+vendor	Hewlett	惠普设备
+vendor	HP Inc	惠普设备
+vendor	Lenovo	联想电脑
+vendor	Toshiba	东芝设备
+vendor	Canon	佳能设备
+vendor	Seiko Epson	爱普生设备
+vendor	Brother	兄弟打印机
+vendor	Siemens	西门子设备
+vendor	Rockwell	罗克韦尔 PLC
+vendor	Schneider	施耐德 PLC
+vendor	Omron	欧姆龙 PLC
+vendor	Mitsubishi	三菱 PLC
+vendor	ABB	ABB 设备
+vendor	Delta	台达 PLC
+vendor	Inovance	汇川 PLC
+vendor	Leadshine	雷赛 PLC
+vendor	Advantech	研华设备
+vendor	Beckhoff	倍福 PLC
+vendor	Phoenix Contact	菲尼克斯电气
+vendor	WAGO	万可 PLC
+vendor	Moxa	MOXA 串口服务器
+vendor	Hikvision	海康威视设备
+vendor	Dahua	大华设备
