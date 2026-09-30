@@ -125,7 +125,7 @@ src/NetScope/
 |---|---|---|
 | `oui.tsv` | exe directory (optional) | Override embedded OUI vendor data |
 | `man_id.tsv` | exe directory (optional) | Override embedded PNO manufacturer data |
-| `segments.txt` | exe directory | Custom subnet list for Stage 3 (one CIDR per line) |
+| `segments.txt` | exe directory (optional) | Custom subnet list for Stage 3 (one CIDR per line) |
 
 If external TSV files are not found, embedded resources are used automatically.
 
