@@ -38,7 +38,7 @@ public class DcpDeviceDialog : Window
         _old = oldValues;
 
         Title = "DCP Device Operations";
-        Width = 440;
+        Width = 480;
         Height = 380;
         WindowStartupLocation = WindowStartupLocation.CenterOwner;
         ResizeMode = ResizeMode.NoResize;
@@ -128,7 +128,7 @@ public class DcpDeviceDialog : Window
         var lbl = new TextBlock { Text = label, VerticalAlignment = VerticalAlignment.Center, Margin = new Thickness(0, 0, 8, 4) };
         Grid.SetRow(lbl, row); Grid.SetColumn(lbl, 0);
         grid.Children.Add(lbl);
-        var txt = new TextBox { Text = value, Margin = new Thickness(0, 0, 0, 4) };
+        var txt = new TextBox { Text = value, Margin = new Thickness(0, 0, 0, 4), MinWidth = 280 };
         Grid.SetRow(txt, row); Grid.SetColumn(txt, 1);
         grid.Children.Add(txt);
         return txt;
